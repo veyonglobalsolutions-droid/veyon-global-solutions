@@ -753,8 +753,75 @@ button {
   font-size: 1.125rem;
   line-height: 1.8;
   color: #CBD5E1;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
   font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   Sister Company Notice (EON Global Group)
+   -------------------------------------------------------------------------- */
+.sister-company-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-gold-border);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.sister-icon-wrapper {
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: rgba(201, 168, 76, 0.08);
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sister-notice-text {
+  font-size: 0.935rem;
+  line-height: 1.6;
+  color: #CBD5E1;
+  margin: 0;
+}
+
+.sister-company-link {
+  color: var(--color-gold);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+  text-decoration-color: rgba(201, 168, 76, 0.4);
+  text-underline-offset: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  margin-left: 4px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.sister-company-link:hover {
+  color: var(--color-gold-hover);
+  text-decoration-color: var(--color-gold-hover);
+}
+
+.sister-company-link .external-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.sister-company-link:hover .external-icon {
+  transform: translate(1px, -1px);
 }
 
 .about-location-tag {
@@ -1132,7 +1199,7 @@ button {
   background-color: #0D1420;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  padding: 64px 48px;
+  padding: 48px 40px;
   text-align: center;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
@@ -1152,12 +1219,56 @@ button {
   max-width: 620px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 34px;
+  margin-bottom: 24px;
   line-height: 1.7;
 }
 
-.contact-action-wrapper {
+/* --------------------------------------------------------------------------
+   Contact Phone Link
+   -------------------------------------------------------------------------- */
+.contact-phone-wrapper {
+  margin-top: 0;
   margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-phone-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 22px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all var(--transition-fast);
+  letter-spacing: 0.02em;
+}
+
+.contact-phone-link:hover {
+  background-color: rgba(201, 168, 76, 0.08);
+  border-color: rgba(201, 168, 76, 0.4);
+  color: var(--color-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(201, 168, 76, 0.1);
+}
+
+.contact-phone-link .phone-icon {
+  color: var(--color-gold);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.contact-phone-link:hover .phone-icon {
+  color: var(--color-gold-light);
+  transform: scale(1.1);
 }
 
 /* --------------------------------------------------------------------------
@@ -1165,7 +1276,7 @@ button {
    Minimal, Discrete, UAE Corporate
    -------------------------------------------------------------------------- */
 .contact-social-group {
-  margin-top: 26px;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1520,7 +1631,7 @@ html.js-ready .reveal.revealed {
   }
 
   .contact-card {
-    padding: 44px 22px;
+    padding: 36px 20px;
   }
 
   .contact-title {
@@ -1529,11 +1640,17 @@ html.js-ready .reveal.revealed {
 
   .contact-subtitle {
     font-size: 1rem;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
 
-  .contact-action-wrapper .btn {
+  .contact-phone-wrapper {
     width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact-phone-link {
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .social-icons,
@@ -1571,6 +1688,11 @@ html.js-ready .reveal.revealed {
 
 /* Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
+  .sister-company-notice {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
   .social-btn {
     padding: 8px 14px;
     font-size: 0.8rem;
